@@ -1,13 +1,14 @@
 package com.tinkoff.edu.app;
 
 public class LoanCalcRepository {
-    public static int requestId;
+    private int requestId;
 
     /*
      * TODO persists request
      *  @return Request Id
      */
-    public static int save() {
+
+    public int save(LoanRequest request) {
         return ++requestId;
     }
 }
