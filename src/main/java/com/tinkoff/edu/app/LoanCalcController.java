@@ -1,14 +1,16 @@
 package com.tinkoff.edu.app;
 
 
-
 public class LoanCalcController {
-    /*
-    Validates and logs requests
-    */
-    public LoanResponse createRequest (LoanRequest request) {
+    private LoanCalcService loanCalcService;
 
-        LoanCalcService loanCalcService = new LoanCalcService();
+    public LoanCalcController(LoanCalcService loanCalcService) {
+        this.loanCalcService = loanCalcService;
+    }
+
+
+    public LoanResponse createRequest(LoanRequest request) {
+
         LoanResponse loanResponse = loanCalcService.createRequest(request);
 
         return loanResponse;
